@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth" dir="ltr">
+<head>
+    <!-- Meta Base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO Meta -->
+    <title>Emanuele Trupia | Full Stack Developer - eCommerce & SaaS Specialist</title>
+    <meta name="description" content="Full Stack Developer specializzato in eCommerce, SaaS e sistemi gestionali. Realizzo soluzioni web performanti su misura per il tuo business.">
+    <meta name="keywords" content="full stack developer, ecommerce, saas, magento, wordpress, laravel, sviluppo web, emanuele trupia">
+    <meta name="author" content="Emanuele Trupia">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Emanuele Trupia | Full Stack Developer - eCommerce & SaaS Specialist">
+    <meta property="og:description" content="Specializzato in eCommerce, sistemi gestionali e architetture SaaS. Trasformo le tue idee in realtà digitali performanti.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manut1993.github.io">
+    <meta property="og:image" content="https://manut1993.github.io/assets/img/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="it_IT">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Emanuele Trupia | Full Stack Developer">
+    <meta name="twitter:description" content="Specializzato in eCommerce, sistemi gestionali e architetture SaaS">
+    <meta name="twitter:image" content="https://manut1993.github.io/assets/img/social-preview.jpg">
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://manut1993.github.io">
+    
+    <!-- Preload Risorse Critiche -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --color-primary: #3b82f6;
+            --color-secondary: #8b5cf6;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .card-hover-effect:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tech-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .tech-icon:hover {
+            transform: scale(1.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Animazioni */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        /* Ottimizzazione accessibilità */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Stili per dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0f172a;
+                color: #f8fafc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800" aria-label="Navigazione principale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold gradient-text">Emanuele Trupia</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#skills" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Competenze</a>
+                        <a href="#services" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Servizi</a>
+                        <a href="#contact" class="nav-link text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contatti</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-300 hover:text-white focus:outline-none" aria-label="Apri menu mobile" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95" aria-hidden="true">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Home</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Competenze</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Servizi</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-32 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" aria-labelledby="hero-heading">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-1/2 mb-12 md:mb-0 text-center md:text-left animate-fade-in">
+                <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Soluzioni digitali <span class="gradient-text">su misura</span> per il tuo business
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 mb-8 px-2 sm:px-0">
+                    Full Stack Developer specializzato in eCommerce, sistemi gestionali e architetture SaaS. Trasformo le tue idee in realtà digitali performanti.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-lg text-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Contattami
+                    </a>
+                    <a href="#services" class="border border-slate-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors text-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
+                        I miei servizi
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 relative md:left-8 mt-10 md:mt-0 animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="relative w-full mx-auto max-w-xs sm:max-w-sm md:max-w-lg">
+                    <div class="absolute top-0 -left-4 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute top-0 -right-4 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="absolute -bottom-8 left-20 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+                    <div class="relative z-10 bg-slate-800/50 p-6 sm:p-8 rounded-2xl backdrop-blur-md border border-slate-700 shadow-2xl mx-2 sm:mx-0">
+                        <div class="flex justify-center mb-4 sm:mb-6">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                                <i class="fas fa-code text-2xl sm:text-3xl md:text-4xl text-white" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-bold text-center mb-3 sm:mb-4">Full Stack Developer</h3>
+                        <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                            <div class="tech-icon">
+                                <i class="fab fa-php text-xl sm:text-2xl text-purple-400" aria-hidden="true" title="PHP"></i>
+                                <span class="sr-only">PHP</span>
+                            </div>
+                            <div class="tech-icon">
+                                <i class="fab fa-js text-xl sm:text-2xl text-yellow-400" aria-hidden="true" title="JavaScript"></i>
+                                <span class="sr-only">JavaScript</span>
+                            </div>
+                            <div class="tech-icon">
+                                <i class="fab fa-laravel text-xl sm:text-2xl text-red-400" aria-hidden="true" title="Laravel"></i>
+                                <span class="sr-only">Laravel</span>
+                            </div>
+                            <div class="tech-icon">
+                                <i class="fab fa-wordpress text-xl sm:text-2xl text-blue-400" aria-hidden="true" title="WordPress"></i>
+                                <span class="sr-only">WordPress</span>
+                            </div>
+                            <div class="tech-icon">
+                                <i class="fab fa-python text-xl sm:text-2xl text-blue-500" aria-hidden="true" title="Python"></i>
+                                <span class="sr-only">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+     <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Le mie <span class="gradient-text">competenze</span></h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                Tecnologie e framework con cui lavoro ogni giorno per creare soluzioni digitali all'avanguardia.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+                <h3 class="font-semibold text-lg">HTML5</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4"></i>
+                <h3 class="font-semibold text-lg">CSS3</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-js text-5xl text-yellow-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">JavaScript</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-php text-5xl text-purple-500 mb-4"></i>
+                <h3 class="font-semibold text-lg">PHP</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-python text-5xl text-blue-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">Python</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-laravel text-5xl text-red-500 mb-4"></i>
+                <h3 class="font-semibold text-lg">Laravel</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-magento text-5xl text-blue-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">Magento</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fab fa-wordpress text-5xl text-blue-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">WordPress</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fas fa-database text-5xl text-teal-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">Database</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fas fa-server text-5xl text-green-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">Server</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fas fa-cloud text-5xl text-blue-300 mb-4"></i>
+                <h3 class="font-semibold text-lg">Cloud</h3>
+            </div>
+            <div class="card-hover-effect bg-slate-800/50 p-6 rounded-xl border border-slate-700 flex flex-col items-center">
+                <i class="fas fa-mobile-alt text-5xl text-indigo-400 mb-4"></i>
+                <h3 class="font-semibold text-lg">Responsive</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-slate-800/30 rounded-3xl my-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">I miei <span class="gradient-text">servizi</span></h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                Soluzioni complete per portare il tuo business online con tecnologie all'avanguardia.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-blue-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-shopping-cart text-2xl text-blue-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Ecommerce Solutions</h3>
+                <p class="text-slate-300 mb-4">
+                    Piattaforme eCommerce personalizzate con Magento, WooCommerce e soluzioni custom per massimizzare le conversioni.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Integrazione pagamenti
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Gestione inventario
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        SEO avanzato
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-purple-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-2xl text-purple-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Sistemi Gestionali</h3>
+                <p class="text-slate-300 mb-4">
+                    Software gestionali su misura per ottimizzare i processi aziendali, con dashboard analitiche e report automatici.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        CRM personalizzati
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Automazione processi
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Integrazione API
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-indigo-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-cloud text-2xl text-indigo-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Architetture SaaS</h3>
+                <p class="text-slate-300 mb-4">
+                    Piattaforme software as a service scalabili e multi-tenant, progettate per crescere con il tuo business.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Architetture cloud-native
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Microservizi
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Sicurezza avanzata
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-green-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-2xl text-green-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Web App Moderne</h3>
+                <p class="text-slate-300 mb-4">
+                    Applicazioni web responsive e progressive (PWA) con focus su UX/UI design e performance.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Single Page Apps
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Design responsive
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Ottimizzazione SEO
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-yellow-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-server text-2xl text-yellow-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Deploy & Hosting</h3>
+                <p class="text-slate-300 mb-4">
+                    Configurazione server, deployment e ottimizzazione delle performance con le migliori tecnologie cloud.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Configurazione server
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        CDN e caching
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Monitoraggio 24/7
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="card-hover-effect bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+                <div class="w-14 h-14 rounded-lg bg-red-500/20 flex items-center justify-center mb-6">
+                    <i class="fas fa-headset text-2xl text-red-400"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Supporto Tecnico</h3>
+                <p class="text-slate-300 mb-4">
+                    Manutenzione, aggiornamenti e supporto continuativo per garantire il massimo uptime e sicurezza.
+                </p>
+                <ul class="space-y-2 text-slate-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Manutenzione
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Aggiornamenti sicurezza
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                        Backup automatici
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto" aria-labelledby="contact-heading">
+        <div class="text-center mb-16">
+            <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold mb-4">Contattami per un <span class="gradient-text">progetto</span></h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                Pronto a trasformare la tua idea in realtà? Contattami direttamente via email o social.
+            </p>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/2">
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 h-full flex flex-col justify-center">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-paper-plane text-5xl mb-4 gradient-text" aria-hidden="true"></i>
+                        <h3 class="text-2xl font-bold mb-4">Scrivimi una email</h3>
+                        <p class="text-slate-300 mb-6">Inviami un messaggio direttamente al mio indirizzo email:</p>
+                        <a href="mailto:emanueletrupia1@gmail.com" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity shadow-lg text-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i> emanueletrupia1@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2">
+                <div class="bg-slate-800/50 p-8 rounded-xl border border-slate-700 h-full">
+                    <h3 class="text-xl font-bold mb-6">Informazioni di contatto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-envelope text-blue-400 text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-slate-200">Email</h4>
+                                <a href="mailto:emanueletrupia1@gmail.com" class="text-slate-400 hover:text-white transition-colors">emanueletrupia1@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-blue-400 text-xl" aria-hidden="true"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-slate-200">Ubicazione</h4>
+                                <p class="text-slate-400">Italia (lavoro remoto worldwide)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <h4 class="text-lg font-medium text-slate-200 mb-4">Seguimi sui social</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/emanuele-trupia-a98898295/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center hover:bg-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in text-white" aria-hidden="true"></i>
+                                </a>
+                                
+                                <a href="https://github.com/Manut1993" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center hover:bg-purple-500 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500" aria-label="GitHub">
+                                    <i class="fab fa-github text-white" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900/80 border-t border-slate-800 py-12 px-4 sm:px-6 lg:px-8" aria-labelledby="footer-heading">
+        <div class="max-w-7xl mx-auto">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold gradient-text">Emanuele Trupia</span>
+                    </div>
+                    <p class="text-slate-400 mt-2 text-sm">
+                        Soluzioni digitali su misura per il tuo business
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-2">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-200 tracking-wider uppercase">Navigazione</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="#home" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
+                            <li><a href="#skills" class="text-slate-400 hover:text-white transition-colors">Competenze</a></li>
+                            <li><a href="#services" class="text-slate-400 hover:text-white transition-colors">Servizi</a></li>
+                            <li><a href="#contact" class="text-slate-400 hover:text-white transition-colors">Contatti</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-200 tracking-wider uppercase">Social</h3>
+                        <ul class="mt-4 space-y-2">
+                            <li><a href="https://www.linkedin.com/in/emanuele-trupia-a98898295/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">LinkedIn</a></li>
+                            <li><a href="https://github.com/Manut1993" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">
+                    &copy; <span id="current-year"></span> Emanuele Trupia. Tutti i diritti riservati.
+                </p>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-slate-400 text-sm">
+                        Sviluppato con <i class="fas fa-heart text-red-400" aria-hidden="true"></i> da Emanuele Trupia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !expanded);
+            menu.classList.toggle('hidden');
+            menu.setAttribute('aria-hidden', expanded);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        document.getElementById('mobile-menu-button').setAttribute('aria-expanded', 'false');
+                        mobileMenu.setAttribute('aria-hidden', 'true');
+                    }
+                }
+            });
+        });
+
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Animation for blob elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const blobs = document.querySelectorAll('.animate-blob');
+            
+            blobs.forEach((blob, index) => {
+                blob.style.animationDelay = `${index * 2}s`;
+                
+                const randomX = Math.floor(Math.random() * 20) - 10;
+                const randomY = Math.floor(Math.random() * 20) - 10;
+                blob.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
